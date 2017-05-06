@@ -28,7 +28,7 @@ public class FshareLinkFolder2File {
             for (String line; (line = br.readLine()) != null;) {
                 System.out.println("going with: "+line);
                 Document doc = Jsoup.connect(line).get();
-                Thread.sleep(5000);
+                Thread.sleep(2000);
                 Elements links = doc.select("a[href].filename");
                 for (Element link : links) {
                     String url = link.absUrl("href");
